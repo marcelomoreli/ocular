@@ -76,7 +76,7 @@ export const createDataStore = (storage?: Storage): Store => {
 
   const groups = () => {
     const currentYear = getCurrentYear();
-    return [...currentYear.expenses, ...currentYear.income];
+    return [...currentYear.expenses, ...currentYear.income, ...currentYear.shares, ...currentYear.assets];
   };
 
   watch(
@@ -117,6 +117,12 @@ export const createDataStore = (storage?: Storage): Store => {
       },
       get income() {
         return getCurrentYear().income;
+      },
+      get shares() {
+        return getCurrentYear().shares;
+      },
+      get assets() {
+        return getCurrentYear().assets;
       }
     }),
 
@@ -131,9 +137,9 @@ export const createDataStore = (storage?: Storage): Store => {
       paste() {
         if (clipboard.value) {
           const {
-            data: { expenses, income }
+            data: { expenses, income, shares, assets }
           } = clipboard.value;
-          Object.assign(getCurrentYear(), { income, expenses });
+          Object.assign(getCurrentYear(), { income, expenses, shares, assets });
           clipboard.value = undefined;
         }
       }
@@ -230,6 +236,8 @@ export const createDataStore = (storage?: Storage): Store => {
     removeBudgetGroup(id: string) {
       remove<BudgetGroup>(getCurrentYear().expenses, (v) => v.id === id);
       remove<BudgetGroup>(getCurrentYear().income, (v) => v.id === id);
+      remove<BudgetGroup>(getCurrentYear().shares, (v) => v.id === id);
+      remove<BudgetGroup>(getCurrentYear().assets, (v) => v.id === id);
     },
 
     addBudget(id: string) {
@@ -267,8 +275,8 @@ export const createDataStore = (storage?: Storage): Store => {
     },
 
     moveBudgetGroup(id: string, target: string, after?: boolean) {
-      const { income, expenses } = getCurrentYear();
-      moveInArrays([income, expenses], id, target, after);
+      const { income, expenses, shares, assets } = getCurrentYear();
+      moveInArrays([income, expenses, shares, assets], id, target, after);
     },
 
     getBudget(id: string) {

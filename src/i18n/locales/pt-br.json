@@ -113,6 +113,14 @@
       "title": "Despesas",
       "expensesFor": "Despesas para {year}"
     },
+    "shares": {
+      "title": "Ações",
+      "sharesFor": "Ações para {year}"
+    },
+    "assets": {
+      "title": "Patrimônio",
+      "assetsFor": "Patrimônio para {year}"
+    },
     "dashboard": {
       "title": "Painel",
       "tables": "Tabelas",

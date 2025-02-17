@@ -23,6 +23,8 @@ export const generateBudgetYearFromCurrent = (year: number, current: BudgetYear)
   return {
     year,
     income: current.income.map(clearValues),
-    expenses: current.expenses.map(clearValues)
+    expenses: current.expenses.map(clearValues),
+    assets: current.assets.map(clearValues),
+    shares: current.shares.map(clearValues)
   };
 };

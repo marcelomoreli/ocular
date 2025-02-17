@@ -69,5 +69,12 @@ export const generateTemplate = (): DataStateV1 => ({
   income: [
     generateBudgetGroup('Wages', ['Pay slip', 'Tips', 'Bonus', 'Commission', 'Other']),
     generateBudgetGroup('Other', ['Transfer from savings', 'Interest income', 'Dividends', 'Gifts', 'Refunds', 'Other'])
+  ],
+  shares: [
+    generateBudgetGroup('Crypto', ['Bitcoin', 'Etherium']),
+    generateBudgetGroup('Others', ['Walmart', 'Amazon', 'Microsoft'])
+  ],
+  assets: [
+    generateBudgetGroup('Buildings', ['House'])
   ]
 });

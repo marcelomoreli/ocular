@@ -74,11 +74,15 @@ export interface BudgetYear {
   year: number;
   expenses: BudgetGroup[];
   income: BudgetGroup[];
+  assets: BudgetGroup[];
+  shares: BudgetGroup[];
 }
 
 export interface DataStateV1 extends MigratableState<1> {
   expenses: BudgetGroup[];
   income: BudgetGroup[];
+  assets: BudgetGroup[];
+  shares: BudgetGroup[];
 }
 
 export interface DataStateV2 extends MigratableState<2> {

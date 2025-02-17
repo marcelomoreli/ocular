@@ -16,7 +16,9 @@ export const migrateApplicationState = createMigrator<DataStateV3, Versions>({
           {
             year: new Date().getFullYear(),
             expenses: from.expenses,
-            income: from.income
+            income: from.income,
+            shares: from.shares,
+            assets: from.assets
           }
         ]
       })

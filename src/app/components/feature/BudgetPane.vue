@@ -20,7 +20,7 @@ import { computed } from 'vue';
 
 const props = defineProps<{
   title?: string;
-  type: 'expenses' | 'income';
+  type: 'expenses' | 'income' | 'assets' | 'shares';
 }>();
 
 const { state } = useDataStore();
