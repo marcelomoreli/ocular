@@ -71,7 +71,7 @@ import { useI18n } from 'vue-i18n';
 import type { Component } from 'vue';
 
 const props = defineProps<{
-  type: 'expenses' | 'income';
+  type: 'expenses' | 'income' | 'assets' | 'shares';
 }>();
 
 const { state, moveBudgetGroup, moveBudgetIntoGroup, addBudgetGroup, getBudgetGroup, isCurrentMonth } = useDataStore();

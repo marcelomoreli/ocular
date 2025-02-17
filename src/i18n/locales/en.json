@@ -108,6 +108,14 @@
       "title": "Expenses",
       "expensesFor": "Expenses for {year}"
     },
+    "shares": {
+      "title": "Shares",
+      "sharesFor": "Shares for {year}"
+    },
+    "assets": {
+      "title": "Assets",
+      "assetsFor": "Assets for {year}"
+    },
     "dashboard": {
       "title": "Dashboard",
       "tables": "Tables",

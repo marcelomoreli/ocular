@@ -52,7 +52,7 @@ import ChangeYearButton from './navigation/year/ChangeYearButton.vue';
 import Link from '@components/base/link/Link.vue';
 import ComponentTransition from '@components/misc/component-transition/ComponentTransition.vue';
 import { useMediaQuery } from '@composables';
-import { RiDonutChartLine, RiHandCoinLine, RiShoppingBagLine } from '@remixicon/vue';
+import { RiDonutChartLine, RiHandCoinLine, RiShoppingBagLine, RiHomeHeartLine, RiWallet3Line } from '@remixicon/vue';
 import { useStorage } from '@storage/index';
 import { computed, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
@@ -72,7 +72,9 @@ interface FrameButton {
 const buttons = computed((): FrameButton[] => [
   { icon: RiDonutChartLine, name: 'dashboard', tooltip: t('page.dashboard.title') },
   { icon: RiHandCoinLine, name: 'income', tooltip: t('page.income.title') },
-  { icon: RiShoppingBagLine, name: 'expenses', tooltip: t('page.expenses.title') }
+  { icon: RiShoppingBagLine, name: 'expenses', tooltip: t('page.expenses.title') },
+  { icon: RiWallet3Line, name: 'shares', tooltip: t('page.shares.title') },
+  { icon: RiHomeHeartLine, name: 'assets', tooltip: t('page.assets.title') }
 ]);
 </script>
 
